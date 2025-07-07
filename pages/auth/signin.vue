@@ -5,9 +5,11 @@
            
             <v-form>
 
-                <v-text-field label="Email" outlined prepend-inner-icon="mdi-email"></v-text-field>
-                <v-text-field label="Password" outlined prepend-inner-icon="mdi-lock" type="password"></v-text-field>
-                <v-btn color="primary" block>Login</v-btn>
+                <v-text-field label="Email" outlined rounded prepend-inner-icon="mdi-email"></v-text-field>
+                <v-text-field label="Password" outlined rounded prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                <v-btn rounded color="primary" block>Login</v-btn>
+                <div class="hr-sect my-5">OR</div>
+                <v-btn rounded color="error" class="text-capitalize" round block><v-icon left>mdi-google</v-icon> Sign In with google</v-btn>
             </v-form>
 
         </v-card>
