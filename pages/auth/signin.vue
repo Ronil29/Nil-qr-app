@@ -19,7 +19,13 @@
         ></v-text-field>
         <v-btn rounded color="primary" block>Login</v-btn>
         <div class="hr-sect my-5">OR</div>
-        <v-btn rounded color="error" @click="signinWithGoogle()" class="text-capitalize" round block
+        <v-btn
+          rounded
+          color="error"
+          @click="signinWithGoogle()"
+          class="text-capitalize"
+          round
+          block
           ><v-icon left>mdi-google</v-icon> Sign In with google</v-btn
         >
       </v-form>
@@ -36,11 +42,13 @@
 
 
 <script>
-export default { layout: "auth",
-    methods:{
-        signinWithGoogle() {
-            this.$auth.loginWith('google')
-        }
-    }
- };
+export default {
+  layout: "auth",
+  middleware: "guest",
+  methods: {
+    signinWithGoogle() {
+      this.$auth.loginWith("google");
+    },
+  },
+};
 </script>
