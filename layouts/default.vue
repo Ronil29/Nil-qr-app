@@ -83,7 +83,11 @@ export default {
           title: 'Inspire',
           to: '/inspire'
         },
-        
+        {
+          icon: 'mdi-qrcode-scan',
+          title: 'Qr Code Scanner',
+          to: '/QRScanner'
+        },
       
         
         
