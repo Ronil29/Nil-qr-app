@@ -62,7 +62,7 @@ export default {
     authoFetchUser: true,
     strategies: {
       google: {
-        clientId: process.env.GOOGLE_CLIENT_ID || '110833979456-u10jork3jmo0lo38qg0hlkomrg330ep6.apps.googleusercontent.com',
+        clientId: process.env.GOOGLE_CLIENT_ID || "110833979456-u10jork3jmo0lo38qg0hlkomrg330ep6.apps.googleusercontent.com",
         scheme: "oauth2",
         endpoints: {
           auhtorization: "http://accounts.google.com/o/oauth2/auth",
@@ -75,7 +75,7 @@ export default {
         },
         responseType: "token id_token ",
         scope: ["profile", "email"],
-        redirectUri: process.env.GOOGLE_REDIRECT_URI || 'http://localhost:3000/auth/callback',
+        redirectUri: process.env.GOOGLE_REDIRECT_URI || "http://localhost:3000/auth/callback",
         codeChallengeMethod: "",
       },
     }
