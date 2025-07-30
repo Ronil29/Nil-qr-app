@@ -28,10 +28,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-  
+
     '~/plugins/html5-qrcode.js'
-  
-   ],
+
+  ],
 
   // ... rest of your nuxt.config.js
 
@@ -59,10 +59,10 @@ export default {
       home: "/",
 
     },
-    authoFetchUser: false,
+    authoFetchUser: true,
     strategies: {
       google: {
-        clientId: '110833979456-u10jork3jmo0lo38qg0hlkomrg330ep6.apps.googleusercontent.com',
+        clientId: process.env.GOOGLE_CLIENT_ID,
         scheme: "oauth2",
         endpoints: {
           auhtorization: "http://accounts.google.com/o/oauth2/auth",
@@ -74,8 +74,8 @@ export default {
           maxAge: 1800,
         },
         responseType: "token id_token ",
-        scope: ["openid","profile" , "email"],
-        redirectUri: "http://localhost:3000/auth/callback",
+        scope: ["profile", "email"],
+        redirectUri: process.env.GOOGLE_REDIRECT_URI,
         codeChallengeMethod: "",
       },
     }
